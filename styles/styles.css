@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    background-color: var(--branco);
+}
+
+:root{
+    --principal : #2147FB;
+    --branco : #fafafa;
+    --cinza : #3c3c3c;
+
+    --fonte-titulo : 'Poppins';
+    --fonte-texto : 'Lexend Deca';
+}
+
+.nav-container{
+    background-color: var(--branco);
+}
+.nav-bar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #3c3c3c12;
+}
+.logo img{
+    height: 40px;
+    width: 40px;
+}
+.nav-links{
+    display: flex;
+    list-style: none;
+    font-family: var(--fonte-texto);
+}
+.nav-links li>a{
+    color: var(--cinza);
+    text-decoration: none;
+    font-weight: 500;
+    margin: 0 20px;
+}
+
+.nav-links li>a:hover{
+    color: var(--principal);
+    transition: 0.3s;
+}
+
+.nav-btns button{
+    cursor: pointer;
+    font-family: var(--fonte-texto);
+    padding:  10px 15px;
+    border-radius: 5px;
+}
+.nav-btns button:nth-child(2){
+    background-color: var(--principal);
+    color: var(--branco);
+    border: none;
+}
+.nav-btns button:nth-child(1){
+    background-color: transparent;
+    border: none;
+    color: var(--cinza);
+    font-weight: 500;
+}
+.nav-btns button:nth-child(1):hover{
+    transition: 0.3s;
+    background-color: #3c3c3c57;
+    color: var(--branco);
+}
