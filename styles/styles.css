@@ -1,14 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+@import url("animations.css");
+
+
 body{
-    background-color: var(--branco);
+    background-color: var(--preto);
 }
 
 :root{
-    --principal : #2147FB;
+    --principal : #03D26F;
+    --secundario: #67dd8d;
+    --terceiro: #d9e2db;
     --branco : #fafafa;
-    --cinza : #3c3c3c;
-    --preto :#121417;
+    --cinza : #282828;
+    --preto :#181818;
 
     --fonte-titulo : 'Poppins';
     --fonte-texto : 'Lexend Deca';
@@ -25,22 +30,27 @@ body{
     justify-content: space-between;
     padding: 20px;
     align-items: center;
-    background-color: var(--branco);
+    background-color: var(--preto);
     border-bottom: 1px solid rgba(0, 0, 0, 0.058);
 }
 
-.logo img{
-    height: 35px;
-    width: 200px;
+.logo h2{
+    font-family: var(--fonte-titulo);
+    margin: 0 10px;
 }
+.logo h2>a{
+    color: var(--principal);
+    text-decoration: none;
+}
+
 .nav-links{
     display: flex;
-    color: var(--cinza);
+    color: var(--branco);
     font-family: var(--fonte-texto);
     list-style: none;
 }
 .nav-links li>a{
-    color: var(--cinza);
+    color: var(--branco);
     margin: 0 20px;
     text-decoration: none;
     font-weight: 600;
@@ -58,56 +68,87 @@ body{
     margin: 0px 10px ;
 }
 .nav-btns button:nth-child(1){
+    color: var(--branco);
     background-color: transparent;
 } 
 .nav-btns button:nth-child(1):hover{
-    background-color: #2147FB;
-    color: var(--branco);
+    background-color: var(--secundario);
+    color: var(--preto);
     transition: 0.3s;
     font-weight: 500;
 }
 .nav-btns button:nth-child(2){
-    background-color: #2147FB;
-    color: var(--branco);
+    background-color: var(--secundario);
+    color: var(--preto);
     font-weight: 500;
 }
 
-/* Main */
 main{
-    margin: 0 80px;
+    margin: 50px 80px;
 }
-.apresentation-container{
-   display: flex; 
-   padding: 20px;
-   align-items: center;
+/* Bloco de Introdução */
+.indroduction-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 230px;
 }
-.apresentation-txt{
-    margin: 0 160px 0 0;
+.intro-text{
+    color: var(--branco);
+    text-align: center;
 }
-.apresentation-txt h1{
+.intro-text h1{
     font-family: var(--fonte-titulo);
-    font-size: 3rem;
-    color: var(--preto);
+    font-size: 4rem;
 }
-.apresentation-txt p{
+.intro-text h1>span{
+    color: var(--principal);
+}
+.intro-text p{
     font-family: var(--fonte-texto);
-    font-size: 18px;
+    font-size: 1.5rem;
 }
 
-.apresentation-container button{
-    margin-right: 10px;
-    padding: 10px 20px;
-    margin-top: 20px;
-    border-radius: 6px;
+.intro-buttons button{
+    padding: 10px 30px;
+    margin: 0 10px;
+    border-radius: 8px;
     border: none;
-    background-color: var(--principal);
+    font-size: 17px;
+    font-weight: 500;
+    font-family: var(--fonte-texto);
+    align-items: center;
+    color: var(--cinza);
+    background-color: var(--terceiro);
+}
+.intro-buttons button:hover{
+    background-color: var(--secundario);
+    color: var(--cinza);
+    transition: 0.3s;
+}
+
+.intro-cards-container{
+    display: flex;
+    gap: 50px;
+    margin: 60px 0;
+}
+.intro-cards{
     color: var(--branco);
+    text-align: center;
+}
+.intro-cards h2{
+    font-family: var(--fonte-titulo);
+}
+.intro-cards p{
     font-family: var(--fonte-texto);
 }
-.apresentation-container button>a{
-    color: var(--branco);
-    text-decoration: none;
-}
-i{
-    margin-left: 10px;
+
+.line-scroll {
+  margin-top: 50px;
+  background-color: var(--principal);
+  height: 50px;
+  width: 2px;
+  animation: indicar 0.3s infinite ease-in-out alternate;
 }
